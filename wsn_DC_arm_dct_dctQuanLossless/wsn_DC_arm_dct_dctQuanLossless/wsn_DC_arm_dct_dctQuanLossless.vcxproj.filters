@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件\ARM_DCT">
+      <UniqueIdentifier>{d1eaf994-c307-4dee-924d-11254565929f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BitArrayC.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dctQuanLossless.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FatFsSimulation.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="main.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MyFileIO.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="mytest.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="UnBitArrayC.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ARM_DCT\arm_bitreversal.c">
+      <Filter>源文件\ARM_DCT</Filter>
+    </ClCompile>
+    <ClCompile Include="ARM_DCT\arm_cfft_radix4_f32.c">
+      <Filter>源文件\ARM_DCT</Filter>
+    </ClCompile>
+    <ClCompile Include="ARM_DCT\arm_cfft_radix4_init_f32.c">
+      <Filter>源文件\ARM_DCT</Filter>
+    </ClCompile>
+    <ClCompile Include="ARM_DCT\arm_cmplx_mult_cmplx_f32.c">
+      <Filter>源文件\ARM_DCT</Filter>
+    </ClCompile>
+    <ClCompile Include="ARM_DCT\arm_common_tables.c">
+      <Filter>源文件\ARM_DCT</Filter>
+    </ClCompile>
+    <ClCompile Include="ARM_DCT\arm_dct4_f32.c">
+      <Filter>源文件\ARM_DCT</Filter>
+    </ClCompile>
+    <ClCompile Include="ARM_DCT\arm_dct4_init_f32.c">
+      <Filter>源文件\ARM_DCT</Filter>
+    </ClCompile>
+    <ClCompile Include="ARM_DCT\arm_mult_f32.c">
+      <Filter>源文件\ARM_DCT</Filter>
+    </ClCompile>
+    <ClCompile Include="ARM_DCT\arm_rfft_f32.c">
+      <Filter>源文件\ARM_DCT</Filter>
+    </ClCompile>
+    <ClCompile Include="ARM_DCT\arm_rfft_init_f32.c">
+      <Filter>源文件\ARM_DCT</Filter>
+    </ClCompile>
+    <ClCompile Include="ARM_DCT\arm_scale_f32.c">
+      <Filter>源文件\ARM_DCT</Filter>
+    </ClCompile>
+    <ClCompile Include="ARM_DCT\myfft.c">
+      <Filter>源文件\ARM_DCT</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BitArrayC.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="dctQuanLossless.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FatFsSimulation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="integer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MyFileIO.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mytest.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UnBitArrayC.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ARM_DCT\arm_common_tables.h">
+      <Filter>源文件\ARM_DCT</Filter>
+    </ClInclude>
+    <ClInclude Include="ARM_DCT\arm_math.h">
+      <Filter>源文件\ARM_DCT</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
