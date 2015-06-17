@@ -841,7 +841,7 @@ void DQLC_DeQuanDCTCoeff(float32_t * p_floatDCTInline, uint16_t * p_uintMax, uin
 	int32_t m;
 
 	blkCnt = DCTBLOCKSIZE;
-	DEBUG_OUTPUT_FUN(DQLC_PrintString("decm");)
+	//DEBUG_OUTPUT_FUN(DQLC_PrintString("decm");)
 	while (blkCnt > 0u)
 	{
 		n = *p_uint8Bits++;
@@ -860,7 +860,7 @@ void DQLC_DeQuanDCTCoeff(float32_t * p_floatDCTInline, uint16_t * p_uintMax, uin
 		{
 			m = 0;
 		}
-		DEBUG_OUTPUT_FUN(DQLC_PrintIntData(m);)
+		//DEBUG_OUTPUT_FUN(DQLC_PrintIntData(m);)
 		//反量化
 		if (n == 0u)
 		{
@@ -880,7 +880,7 @@ void DQLC_DeQuanDCTCoeff(float32_t * p_floatDCTInline, uint16_t * p_uintMax, uin
 		p_uint8MaxBits++;
 		blkCnt--;
 	}
-	DEBUG_OUTPUT_FUN(DQLC_PrintString("\n");)
+	//DEBUG_OUTPUT_FUN(DQLC_PrintString("\n");)
 }
 
 void DQLC_DeCompress(const char* inputFile, const char * outputFile, uint8_t isLossless)
@@ -908,7 +908,7 @@ void DQLC_DeCompress(const char* inputFile, const char * outputFile, uint8_t isL
 		*pUint8S++ = (uint8_t)DQLC_DecodeValue();
 		blkCnt--;
 	}
-	DEBUG_OUTPUT_FUN(DQLC_PrintUint8Array(p_uint8BitsBuffer);)
+	//DEBUG_OUTPUT_FUN(DQLC_PrintUint8Array(p_uint8BitsBuffer);)
 	//解码最大绝对值floatMax
 	blkCnt = DCTBLOCKSIZE >> 2u;
 	memset(p_uintDCTMaxValueBuffer, 0, DCTBLOCKSIZE * sizeof(uint16_t));
@@ -921,15 +921,15 @@ void DQLC_DeCompress(const char* inputFile, const char * outputFile, uint8_t isL
 		*pMaxValue++ = (uint16_t)DQLC_DecodeValue();
 		blkCnt--;
 	}
-	DEBUG_OUTPUT_FUN(DQLC_PrintUint16Array(p_uintDCTMaxValueBuffer);)
+	//DEBUG_OUTPUT_FUN(DQLC_PrintUint16Array(p_uintDCTMaxValueBuffer);)
 	//求最大位数
 	memset(p_uint8MaxBitsBuffer, 0, DCTBLOCKSIZE*sizeof(uint8_t));
 	DQLC_QuanMAXBits(p_uintDCTMaxValueBuffer, p_uint8MaxBitsBuffer);
-	DEBUG_OUTPUT_FUN(DQLC_PrintUint8Array(p_uint8MaxBitsBuffer);)
+	//DEBUG_OUTPUT_FUN(DQLC_PrintUint8Array(p_uint8MaxBitsBuffer);)
 	//求位数的2N，存在p_floatDCTPowerBuffer中
 	memset(p_inlineBufferUint2N, 0, DCTBLOCKSIZE*sizeof(int32_t));
 	DQLC_Cal2NBits(p_inlineBufferUint2N, p_uint8BitsBuffer);
-	DEBUG_OUTPUT_FUN(DQLC_PrintUintArray(p_inlineBufferUint2N);)
+	//DEBUG_OUTPUT_FUN(DQLC_PrintUintArray(p_inlineBufferUint2N);)
 
 	if (isLossless)
 	{
@@ -938,9 +938,9 @@ void DQLC_DeCompress(const char* inputFile, const char * outputFile, uint8_t isL
 		{
 			DQLC_DeQuanDCTCoeff(p_floatDCTBuffer, p_uintDCTMaxValueBuffer, p_inlineBufferUint2N,
 				p_uint8BitsBuffer, p_uint8MaxBitsBuffer);
-			DEBUG_OUTPUT_FUN(DQLC_PrintFloatArray(p_floatDCTBuffer);)
+			//DEBUG_OUTPUT_FUN(DQLC_PrintFloatArray(p_floatDCTBuffer);)
 				arm_dct4_f32(&dctInstance, p_floatState, p_floatDCTBuffer);
-			DEBUG_OUTPUT_FUN(DQLC_PrintFloatArray(p_floatDCTBuffer);)
+			//DEBUG_OUTPUT_FUN(DQLC_PrintFloatArray(p_floatDCTBuffer);)
 			blkCnt = DCTBLOCKSIZE >> 2u;
 			memset(p_int16Buffer, 0, DCTBLOCKSIZE*sizeof(int16_t));
 			pS1 = p_floatDCTBuffer;
@@ -958,8 +958,8 @@ void DQLC_DeCompress(const char* inputFile, const char * outputFile, uint8_t isL
 
 				blkCnt--;
 			}
-			DEBUG_OUTPUT_FUN(DQLC_PrintString("--original:\n");)
-			DEBUG_OUTPUT_FUN(DQLC_PrintInt16Array(p_int16Buffer);)
+			//DEBUG_OUTPUT_FUN(DQLC_PrintString("--original:\n");)
+			//DEBUG_OUTPUT_FUN(DQLC_PrintInt16Array(p_int16Buffer);)
 			f_write(&outFile, p_int16Buffer, DCTBLOCKSIZE*sizeof(int16_t), &br);
 		}
 	}
