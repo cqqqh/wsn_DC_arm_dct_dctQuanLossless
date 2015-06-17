@@ -1,0 +1,2 @@
+# wsn_DC_arm_dct_dctQuanLossless
+dctQuanLossless方法，VS平台采用ARM DCT变换代码，WSN
