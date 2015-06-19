@@ -1,2 +1,6 @@
 # wsn_DC_arm_dct_dctQuanLossless
 dctQuanLossless方法，VS平台采用ARM DCT变换代码，WSN
+
+# 测试数据
+目录：_Projects\_TestData\WSN Data Compression\wsn_DC_arm_dct_dctQuanLossless\TestData
+将测试数据目录TestData复制到项目目录下即可运行
